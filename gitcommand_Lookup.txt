@@ -1,0 +1,55 @@
+https://www.youtube.com/watch?v=3fUbBnN_H2c&list=PLwvrYc43l1Mz_c-vV1yVyvFNFZPAleSNE&index=9
+
+git config -l          -- list all the cofig
+git init               -- initializing git project 
+git add .              -- for all the file in current directory
+git add <FileName>     -- for specific file in current directory
+git add -A             -- for all files in the repo
+git commit -m <"Commit message">   -- commit the changes
+git log                -- checking the commit history
+git show <commit hash> -- check the changes for specific commit
+git --amend -m <"Commit message "> -- used to correct commit messages
+git checkout <fileName>  -- revert changes
+
+push existing reop to remote:
+
+git remote add origin https://github.com/anupchhetri/learning-git.git
+git branch -M main   --- master is changed to main in gitHub
+git push -u origin main
+
+Run git remote -v to see the current remote URL.
+$ git remote -v
+Update the remote URL with git remote set-url using the current and new remote URLs.
+$ git remote set-url origin <git url>
+
+Branching:
+git branch  -- lists all the local branches
+git branch -r  -- lists all the remote branches
+git branch -a  -- lists all the branches
+git branch <Branch name> -- creating branch from current branch
+git checkout -b <Branch Name>  -- creating branch from current branch and checkouts the same
+git checkout <Branch name>  -- checkout branches
+git checkout -            -- checkout previous branch
+git push --set-upstream origin <new Branch name>   -- push new branch to remote
+git push -u origin <new branch name>               -- push new branch to remote
+
+git push -f   -- for forece push to remote
+git branch -d <branch name>     -- delete a particular branch
+
+
+Checking changes(History)
+git log --oneline
+git show <commit hash>   -- changes for a specific changes
+
+resolving conflict in git
+1) Squash the local commit (stash)
+2) rebase to remote 
+3) merge the stash 
+4) Push to remote
+
+
+
+
+--Rebase
+git pull -r origin <branch name>    -- takes the latest changes from specified branch and then tries to add our chnages on top of it.
+if there is a conflict then resolve the commit 
